@@ -46,5 +46,12 @@ namespace Day14_LinkedList_Batch222
                 }
             }
         }
+        public void AddAtfirst(int data)
+        {
+            Node newNode1 = new Node(data);//creating new node and passsing data
+            newNode1.next = head;
+            head = newNode1;
+            Console.WriteLine("{0} is added ", newNode1.data);
+        }
     }
 }

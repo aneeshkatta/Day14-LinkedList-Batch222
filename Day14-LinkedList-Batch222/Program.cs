@@ -10,7 +10,7 @@ namespace Day14_LinkedList_Batch222
     {
         static void Main()
         {
-            Console.WriteLine("Welcome! Enter a program number\n1.LinkedListUc1");
+            Console.WriteLine("Welcome! Enter a program number\n1.LinkedListUc1\n2.LinkedListUc2");
             int input = Convert.ToInt32(Console.ReadLine());
             switch (input)
             {
@@ -20,6 +20,13 @@ namespace Day14_LinkedList_Batch222
                     LL.Addlast(30);
                     LL.Addlast(70);
                     LL.Display(); 
+                    break;
+                case 2:
+                    LinkedListUc customLL = new LinkedListUc();
+                    customLL.AddAtfirst(70);
+                    customLL.AddAtfirst(30);
+                    customLL.AddAtfirst(56);
+                    customLL.Display();
                     break;
             }
         }
