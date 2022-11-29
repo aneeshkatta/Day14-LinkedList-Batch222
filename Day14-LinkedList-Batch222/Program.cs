@@ -10,7 +10,7 @@ namespace Day14_LinkedList_Batch222
     {
         static void Main()
         {
-            Console.WriteLine("Welcome! Enter a program number\n1.LinkedList-Uc1-createList\n2.LinkedList-Uc2-addfirst\n3.LinkedList-Uc3-add last\n4.LinkedList-Uc4-insert node\n5.LinkedList-Uc5-delete first node\n6.LinkedList-Uc6-delete last node\n7.LinkedList-Uc7-Search node\n8.LinkedList-Uc8-Search and Add node");
+            Console.WriteLine("Welcome! Enter a program number\n1.LinkedList-Uc1-createList\n2.LinkedList-Uc2-addfirst\n3.LinkedList-Uc3-add last\n4.LinkedList-Uc4-insert node\n5.LinkedList-Uc5-delete first node\n6.LinkedList-Uc6-delete last node\n7.LinkedList-Uc7-Search node\n8.LinkedList-Uc8-Search and Add node\n9.LinkedList-Uc9-Search and delete search node");
             int input = Convert.ToInt32(Console.ReadLine());
             switch (input)
             {
@@ -76,6 +76,18 @@ namespace Day14_LinkedList_Batch222
                     CustomLL6.AddLast(70);
                     CustomLL6.SearchNodeAddNode(30,40);//insert 40 to 30;
                     CustomLL6.Display();
+                    break;
+                case 9:
+                    LinkedList CustomLL7 = new LinkedList();
+                    CustomLL7.AddLast(56);
+                    CustomLL7.AddLast(30);
+                    CustomLL7.AddLast(40);
+                    CustomLL7.AddLast(70);
+                    Console.WriteLine("Before deletion:");
+                    CustomLL7.Display();
+                    Console.WriteLine("After deletion:");
+                    CustomLL7.SearchNodeDeleteNode(40);//search and delete 40 ;
+                    CustomLL7.Display();
                     break;
             }
         }

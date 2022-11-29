@@ -133,6 +133,18 @@ namespace Day14_LinkedList_Batch222
             temp.next = newnode;
             Console.WriteLine("{0} inserted afer the {1} node in the linked list", newnode.data, temp.data);
         }
+        internal void SearchNodeDeleteNode( int SearchDeletedata)
+        {
+            Node temp = head;
+            Node newnode = new Node(SearchDeletedata);
+            while (temp.next.data != newnode.data)
+            {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            
+            Console.WriteLine("{0} deleted afer the {1} node in the linked list", SearchDeletedata, temp.data);
+        }
 
     } 
 }
