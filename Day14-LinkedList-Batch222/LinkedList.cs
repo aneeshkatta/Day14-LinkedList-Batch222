@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Day14_LinkedList_Batch222
 {
@@ -120,5 +121,18 @@ namespace Day14_LinkedList_Batch222
                 Console.WriteLine("\nThe Node {0} is not found in the linked list.", data);
             }
         }
-    }
+        internal void SearchNodeAddNode(int searchdata, int insertdata)
+        {
+            Node temp = head;
+            Node newnode = new Node(insertdata);
+            while (temp.data!= searchdata)
+            {
+              temp = temp.next;
+            }
+            newnode.next = temp.next;
+            temp.next = newnode;
+            Console.WriteLine("{0} inserted afer the {1} node in the linked list", newnode.data, temp.data);
+        }
+
+    } 
 }
