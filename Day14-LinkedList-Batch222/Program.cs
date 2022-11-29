@@ -10,7 +10,7 @@ namespace Day14_LinkedList_Batch222
     {
         static void Main()
         {
-            Console.WriteLine("Welcome! Enter a program number\n1.LinkedList-Uc1-createList\n2.LinkedList-Uc2-addfirst\n3.LinkedList-Uc3-add last\n4.LinkedList-Uc4-insert node\n5.LinkedList-Uc5-delete node");
+            Console.WriteLine("Welcome! Enter a program number\n1.LinkedList-Uc1-createList\n2.LinkedList-Uc2-addfirst\n3.LinkedList-Uc3-add last\n4.LinkedList-Uc4-insert node\n5.LinkedList-Uc5-delete first node\n6.LinkedList-Uc6-delete last node");
             int input = Convert.ToInt32(Console.ReadLine());
             switch (input)
             {
@@ -51,6 +51,15 @@ namespace Day14_LinkedList_Batch222
                     CustomLL3.Display();
                     CustomLL3.DeleteFirstNode(56);
                     CustomLL3.Display();
+                    break;
+                case 6:
+                    LinkedList CustomLL4 = new LinkedList();
+                    CustomLL4.AddLast(56);
+                    CustomLL4.AddLast(30);
+                    CustomLL4.AddLast(70);
+                    CustomLL4.Display();
+                    CustomLL4.DeleteLastNode(70);
+                    CustomLL4.Display();
                     break;
             }
         }

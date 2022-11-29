@@ -84,5 +84,25 @@ namespace Day14_LinkedList_Batch222
             Console.WriteLine("First Element {0} Is Removed", data);
             return this.head;
         }
+        internal Node DeleteLastNode(int data)
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                return null;
+            }
+            Node temp = head;
+            while (temp.next.next!= null)
+            {                
+                temp = temp.next;
+            }
+            temp.next = null;
+            Console.WriteLine("Last Element {0} Is Removed", data);
+            return this.head;
+        }
     }
+    
 }
