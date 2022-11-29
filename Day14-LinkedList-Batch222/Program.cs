@@ -10,37 +10,37 @@ namespace Day14_LinkedList_Batch222
     {
         static void Main()
         {
-            Console.WriteLine("Welcome! Enter a program number\n1.LinkedList-Uc1\n2.LinkedList-Uc2\n3.LinkedList-Uc3\n4.LinkedList-Uc4");
+            Console.WriteLine("Welcome! Enter a program number\n1.LinkedList-Uc1-createList\n2.LinkedList-Uc2-addfirst\n3.LinkedList-Uc3-add last\n4.LinkedList-Uc4-insert node");
             int input = Convert.ToInt32(Console.ReadLine());
             switch (input)
             {
                 case 1:
-                    LinkedListUc LL = new LinkedListUc();
-                    LL.Addlast(56);
-                    LL.Addlast(30);
-                    LL.Addlast(70);
+                    LinkedList LL = new LinkedList();
+                    LL.AddLast(56);
+                    LL.AddLast(30);
+                    LL.AddLast(70);
                     LL.Display(); 
                     break;
                 case 2:
-                    LinkedListUc customLL = new LinkedListUc();
-                    customLL.AddAtfirst(70);
-                    customLL.AddAtfirst(30);
-                    customLL.AddAtfirst(56);
-                    customLL.Display();
+                    LinkedList CustomLL = new LinkedList();
+                    CustomLL.AddAtFirst(70);
+                    CustomLL.AddAtFirst(30);
+                    CustomLL.AddAtFirst(56);
+                    CustomLL.Display();
                     break;
                 case 3:
-                    LinkedListUc customLL1 = new LinkedListUc();
-                    customLL1.AddAtfirst(56);
-                    customLL1.Addlast(30);
-                    customLL1.Addlast(70);
+                    LinkedList customLL1 = new LinkedList();
+                    customLL1.AddAtFirst(56);
+                    customLL1.AddLast(30);
+                    customLL1.AddLast(70);
                     customLL1.Display();
                     break;
                 case 4:
-                    LinkedListUc customLL2 = new LinkedListUc();
-                    customLL2.Addlast(70);
-                    customLL2.AddAtfirst(56);
+                    LinkedList customLL2 = new LinkedList();
+                    customLL2.AddLast(70);
+                    customLL2.AddAtFirst(56);
                     customLL2.Display();
-                    customLL2.InsertAfterPrevious(56, 30, 70);
+                    customLL2.InsertBetween(56, 30, 70);
                     customLL2.Display();
                     break;
             }

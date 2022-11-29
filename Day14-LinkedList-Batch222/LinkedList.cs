@@ -9,7 +9,7 @@ namespace Day14_LinkedList_Batch222
     public class LinkedList
     {
         internal Node head;
-        internal void Addlast(int data)
+        internal void AddLast(int data)
         {
             Node newNode = new Node(data);//creating new node and passsing data
 
@@ -48,14 +48,14 @@ namespace Day14_LinkedList_Batch222
                 }
             }
         }
-        public void AddAtfirst(int data)
+        public void AddAtFirst(int data)
         {
             Node newNode1 = new Node(data);//creating new node and passsing data
             newNode1.next = head;
             head = newNode1;
             Console.WriteLine("{0} is inserted in to Linked list at first position ", newNode1.data);
         }
-        internal void InsertAfterPrevious(int previous, int data, int after)
+        internal void InsertBetween(int previous, int data, int after)
         {
             Node temp = head;
             Node newnode = new Node(data);
