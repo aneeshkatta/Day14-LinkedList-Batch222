@@ -33,7 +33,7 @@ namespace Day14_LinkedList_Batch222
             Console.WriteLine("Display of Nodes");
             Node temp = this.head;
             int pos = 1;
-            if(temp==null)
+            if (temp == null)
             {
                 Console.WriteLine("LinkedList is Empty");
                 return;
@@ -42,7 +42,7 @@ namespace Day14_LinkedList_Batch222
             {
                 while (temp != null)
                 {
-                    Console.Write("position :"+pos+" Data " + temp.data + " \n");              
+                    Console.Write("position :" + pos + " Data " + temp.data + " \n");
                     temp = temp.next;
                     pos++;
                 }
@@ -80,7 +80,7 @@ namespace Day14_LinkedList_Batch222
             {
                 return null;
             }
-            this.head = this.head.next;         
+            this.head = this.head.next;
             Console.WriteLine("First Element {0} Is Removed", data);
             return this.head;
         }
@@ -95,14 +95,30 @@ namespace Day14_LinkedList_Batch222
                 return null;
             }
             Node temp = head;
-            while (temp.next.next!= null)
-            {                
+            while (temp.next.next != null)
+            {
                 temp = temp.next;
             }
             temp.next = null;
             Console.WriteLine("Last Element {0} Is Removed", data);
             return this.head;
         }
+        internal void Search(int data)
+        {
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+                    Console.WriteLine("The node {0} is found.", temp.data);
+                    return;
+                }
+                temp = temp.next;
+            }
+            if (temp == null)
+            {
+                Console.WriteLine("\nThe Node {0} is not found in the linked list.", data);
+            }
+        }
     }
-    
 }
