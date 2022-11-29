@@ -74,5 +74,15 @@ namespace Day14_LinkedList_Batch222
                 }
             }
         }
+        internal Node DeleteFirstNode(int data)
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;         
+            Console.WriteLine("First Element {0} Is Removed", data);
+            return this.head;
+        }
     }
 }
