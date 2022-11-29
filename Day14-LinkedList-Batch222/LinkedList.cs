@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day14_LinkedList_Batch222
 {
-    public class LinkedListUc
+    public class LinkedList
     {
         internal Node head;
         internal void Addlast(int data)
@@ -26,12 +26,13 @@ namespace Day14_LinkedList_Batch222
                 }
                 temp.next = newNode;
             }
-            Console.WriteLine("{0} is inserted in to Linked list", newNode.data);
+            Console.WriteLine("{0} is inserted in to Linked list at last position", newNode.data);
         }
         public void Display()
         {
             Console.WriteLine("Display of Nodes");
             Node temp = this.head;
+            int pos = 1;
             if(temp==null)
             {
                 Console.WriteLine("LinkedList is Empty");
@@ -41,8 +42,9 @@ namespace Day14_LinkedList_Batch222
             {
                 while (temp != null)
                 {
-                    Console.Write("" + temp.data + " ");
+                    Console.Write("position :"+pos+" Data " + temp.data + " \n");              
                     temp = temp.next;
+                    pos++;
                 }
             }
         }
@@ -51,7 +53,26 @@ namespace Day14_LinkedList_Batch222
             Node newNode1 = new Node(data);//creating new node and passsing data
             newNode1.next = head;
             head = newNode1;
-            Console.WriteLine("{0} is added at first position ", newNode1.data);
+            Console.WriteLine("{0} is inserted in to Linked list at first position ", newNode1.data);
+        }
+        internal void InsertAfterPrevious(int previous, int data, int after)
+        {
+            Node temp = head;
+            Node newnode = new Node(data);
+            Node store;
+            while (temp != null)
+            {
+                if (temp.data == previous && temp.next.data == after)
+                {
+                    store = temp.next;
+                    temp.next = newnode;
+                    newnode.next = store;
+                }
+                else
+                {
+                    temp = temp.next;
+                }
+            }
         }
     }
 }
